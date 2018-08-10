@@ -128,7 +128,7 @@ export default class LinkedList {
     toArray() {
         const nodes = [];
         
-        let currentNode = head;
+        let currentNode = this.head;
         while(currentNode) {
             nodes.push(currentNode);
             currentNode = currentNode.next;
