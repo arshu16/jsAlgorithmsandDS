@@ -122,6 +122,24 @@ export default class LinkedList {
     }
 
     /**
+     * @returns {LinkedListNode}
+     * @memberof LinkedList
+     */
+    deleteHead() {
+        if(!this.head)
+            return null;
+        const deletedHead = this.head;
+
+        if(this.head.next) {
+            this.head = this.head.next;
+        } else {
+            this.head = null;
+            this.tail = null;
+        }
+        return deletedHead;
+    }
+
+    /**
      * @memberof LinkedList
      * @returns {LinkedListNode[]}
      */
